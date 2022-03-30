@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text level semantics</title>
+    <!--  'text level' 텍스트를 사용할 때 쓰는 태그들/ 인라인 요소들이다 텍스트 영역만큼만 공간을 차지한다./그룹은 블럭레벨요소이다 -->
+</head>
+<body>
+    <!--br 줄바꿈을 위한 기능적인 태그 -->
+    <!--wbr 문장의 길이와 화면의 크기에 맞춰 그 이후 문장부터 붙거나 떨어진다. //반응형 디자인할때 사용한다, 잘 사용안한다 -->
+    <p style="white-space: nowrap;">
+        Lorem ipsum dolor sit amet consectetur adip<br>isicing elit. Voluptatem quae deleniti nulla sunt perspiciatis magnam perferendis voluptatum,<wbr> sit veritatis ut provident ducimus ipsa quod, corporis eaque pariatur. Suscipit, quis dolor.
+    </p>
+    <!-- 
+        화이트 스페이스처리방법 
+        화면의 끝과 공백(화이트스페이스)가 닿았을 때 어떻게 처리해야하는지
+        white-space: normal => 화면을 만나면 줄바꿈을 한다.
+        white-space: nowrap => 화면을 넘어가도 감싸지않는다.
+    -->
+
+    <p style="word-break: keep-all;">풀밭에 같지 전인 노년에게서 청춘의청춘의청춘의<wbr> 방지. 전인 열락의 풀이 것이다. 방지. 전인 열락의 풀이 것이다.</p>
+    <!--CJK언어는 한글자씩 떨어진다 (영어는 단어단위로 떨어진다.)
+        웹브라우저에서 한글과 영어의 렌더링 차이이다.
+        word-break: keep-all <=를 사용하면 영어처럼 단어 단위로 떨어진다.
+    -->
+
+    <!-- 
+        <a> html의 핵심적인 요소, 
+        href(하이퍼 레퍼런스)이동할 경로를 적는다. 
+        href에 넣음 #id이름(해쉬링크) 을 경로로 사용할수 있다.  
+    -->
+    <a href="https://www.naver.com" target="_blank">click</a>  
+    <a href="./index.html">click</a>
+    <a href="#three">click</a> 
+    <a href="./index.html" download>click</a>
+    <a href="./hello.hwp" download="a.hwp">hwp download click</a>
+    <!-- download="a.hwp" 다운받는 파일 이름을 지정한다 -->
+    <!-- 강조할 때는 보통 strong -->
+    <!-- <dfn> 디파인  <abbr> 준말, 약자를 나타내고 싶을 때 -->
+    
+    <!-- 작은 글자를 표현하는 용도보단 화학기호나 수학공식 등 첨자 기호를 표현하기 위해 사용되는 것   -->
+    <p>H<sub>2</sub>0</p>
+    <p>x<sup>2</sup>=4</p>
+    
+</body>
+</html>

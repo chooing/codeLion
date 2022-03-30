@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Embedded content</title>
+    <style>
+      img {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 상대경로 -->
+    <img src="./img/cat.jpg" alt="귀여운 고양이" />
+    <!-- 절대 경로 /(루트) -->
+    <img src="/3day/img/cat.jpg" alt="귀여운 고양이" />
+    <!-- ./ 현재 폴더 ../현재 폴더 밖 -->
+    <img src="/3day/img/cat.jpg" alt="" />
+    <!-- 의미가 없는 이미지라면 alt 값을 비워두면 스크린 리더가 읽지 않는다. -->
+
+
+
+  </body>
+</html>
