@@ -1,0 +1,290 @@
+/* setting */
+
+:root{
+    --main:#EAE8FE;
+    --sub:#6327FE;
+    --border:#BDBDBD;
+}
+
+body{
+    background-color: var(--main);
+    font-weight: 500;
+}
+
+.wrapping{
+    width: 748px;
+    margin: 0 auto;
+}
+
+.hide{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+    position: fixed;
+}
+/* 공통 design*/
+.scroll::-webkit-scrollbar {
+    width: 4px;
+}
+.scroll::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.scroll::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #fff;
+}
+.scroll::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+.scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #fff transparent;
+}
+
+.list-form{
+    overflow: hidden scroll;
+    border: 2px solid var(--border);
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 12px;
+    background-color: var(--main);
+}
+
+.list-form li{
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    padding: 8px 8px 8px 10px;
+    height: 46px;
+    overflow: hidden;
+}
+.list-form li:last-child{
+    margin-bottom: 0;
+}
+
+.list-form li img{
+    float: left;
+    width: 18px;
+}
+.list-form li h4{
+    display: inline;
+    float: left;
+    font-size: 9px;
+    margin-left: 10px;
+    line-height: 3;
+}
+.list-form li strong{
+    display: block;
+    font-size: 14px;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 2px solid var(--border);
+    line-height: 1.9;
+    float: right;
+}
+
+
+/* header */
+.header{
+    margin-bottom: 67px;
+}
+.logo{ 
+    width: 386px; 
+    margin: 0 auto;
+}
+.logo img{width: 386px;}
+
+/* main */
+.main{
+    height: 545px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+/* machine */
+.main .machine{
+    width: 360px;
+    height: 545px;
+    padding: 31px 27px 28px;
+    box-sizing: border-box;
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.machine .drinks{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 8px;
+}
+.machine .drinks .can-btn{
+    width: 94px;
+    height: 130px;
+    padding: 11px 12px 9px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.machine .drinks .can-btn img{
+    width: 35.86px;
+}
+
+.machine .drinks .can-btn h4{
+    font-size: 10px;
+    margin-top: 3px;
+    margin-bottom: 6px;
+}
+
+.machine .drinks .can-btn strong{
+    display: block;
+    width: 70px;
+    padding: 5px 0;
+    height: 12px;
+    font-size: 12px;
+    color: #fff;
+    background-color: var(--sub);
+    border-radius: 50px;
+}
+
+.machine .changes-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 12px;
+}
+
+.machine .changes-wrap .left{
+    width: 200px;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 8px 10px;
+    box-sizing: border-box;
+}
+.machine .changes-wrap .right{
+    width: 94px;
+    height: 32px;
+    font-size: 13px;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.machine .changes.left{
+    background-color: var(--main);
+    overflow: hidden;
+}
+.machine .changes span{ float: right; }
+
+.machine .deposit-form{
+    margin-top: 12px;
+    display: flex;
+}
+
+.machine .deposit.left{
+    padding-left: 6px;
+    border: 2px solid var(--border);
+    margin-right: 12px;
+}
+
+.machine .cart-list{
+    width: 200px;
+    height: 106px;
+}
+
+.machine .cart-list li button{
+    width: 100%;
+    
+}
+
+.machine .buy-btn{
+    width: 94px;
+    height: 106px;
+    background-color: var(--sub);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+/* user-money */
+.main .user-money{
+    width: 360px;
+    height: 50px;
+    background-color: #fff;
+}
+
+.main .user-money .title{
+    width: 286px;
+    height: 20px;
+    padding: 6px 10px;
+    margin: 9px 27px;
+    background-color: var(--main);
+    border-radius: 6px;
+    overflow: hidden;
+}
+.main .user-money .title strong{
+    float: right;
+}
+
+/* user-items */
+.main .user-items{
+    width: 306px;
+    height: 415px;
+    background-color: #fff;
+    padding: 30px 27px;
+    text-align: center;
+}
+
+.main .user-items .title{
+    font-weight: 700;
+}
+
+.main .user-items .get-list{
+    width: 306px;
+    height: 364px;
+    margin: 13px auto 6px;
+}
+
+.result-money{
+    text-align: right;
+    padding-top: 10px;
+}
+
+/* media  */
+@media (max-width: 360px) {
+    body{
+        background-color: #fff;
+        font-weight: 500;
+    }
+    .wrapping{
+        width: 360px;
+        /* margin: 0 auto; */
+    }
+    .header{
+        margin-bottom: 25px;
+    }
+    .logo{width: 166px;}
+    .logo img{width: 166px;}
+    .main{
+        height: inherit;
+    }
+    .main .machine{padding-bottom: 10px;}
+    .main .user-items{padding-bottom: 47px;}
+}

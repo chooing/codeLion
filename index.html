@@ -4,10 +4,183 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./reset.css">
     <title>벤딩머신</title>
 </head>
 <body>
-    <h1>djklj</h1>
-    <p>jeje</p>
+    <header class="header">
+        <div class="wrapping">
+            <h1 class="logo">
+                <a href="#">
+                    <picture>
+                        <source srcset="./images/logo.svg" type="image/svg">
+                        <img src="./images/logo.png" alt="홈페이지 로고">
+                    </picture>
+                </a>
+            </h1>
+        </div>
+    </header>
+    <div class="wrapping">
+        <main class="main">
+            <section class="machine">
+                <h2 class="hide">자판기</h2>
+                <ul class="drinks">
+                    <li>
+                        <button type="button" class="can-btn">
+                            <picture>
+                                <source srcset="./images/Original_Cola.svg" type="image/svg">
+                                <img src="./images/Original_Cola.png" alt="Original_Cola">
+                            </picture>
+                            <h4>Original_Cola</h4>
+                            <strong>1000원</strong>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="can-btn">
+                            <picture>
+                                <source srcset="./images/Violet_Cola.svg" type="image/svg">
+                                <img src="./images/Violet_Cola.png" alt="Violet_Cola">
+                            </picture>
+                            <h4>Violet_Cola</h4>
+                            <strong>1000원</strong>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="can-btn">
+                            <picture>
+                                <source srcset="./images/Yellow_Cola.svg" type="image/svg">
+                                <img src="./images/Yellow_Cola.png" alt="Yellow_Cola">
+                            </picture>
+                            <h4>Yellow_Cola</h4>
+                            <strong>1000원</strong>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="can-btn">
+                            <picture>
+                                <source srcset="./images/Cool_Cola.svg" type="image/svg">
+                                <img src="./images/Cool_Cola.png" alt="Cool_Cola">
+                            </picture>
+                            <h4>Cool_Cola</h4>
+                            <strong>1000원</strong>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="can-btn">
+                            <picture>
+                                <source srcset="./images/Green_Cola.svg" type="image/svg">
+                                <img src="./images/Green_Cola.png" alt="Green_Cola">
+                            </picture>
+                            <h4>Green_Cola</h4>
+                            <strong>1000원</strong>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="can-btn">
+                            <picture>
+                                <source srcset="./images/Orange_Cola.svg" type="image/svg">
+                                <img src="./images/Orange_Cola.png" alt="Orange_Cola">
+                            </picture>
+                            <h4>Orange_Cola</h4>
+                            <strong>1000원</strong>
+                        </button>
+                    </li>
+                </ul>
+                <div class="changes-wrap">
+                    <p class="changes left">잔액:<span>1,000 원</span></p>
+                    <button class="changes-btn right" type="button">거스름돈 반환</button>
+                    <form class="deposit-form" id="depositForm" action="./index.html" method="post">
+                        <legend class="hide">입금 양식</legend>
+                        <input class="deposit left" type="number" min="1" placeholder="입금액 입력">
+                        <button class="deposit-btn right" type="submit">입금</button>
+                    </form>
+                </div>
+                <ul class="cart-list list-form scroll">
+                    <li>
+                        <button>
+                            <img src="./images/Cool_Cola.png" alt="Cool_Cola">
+                            <h4>Cool_Cola</h4>
+                            <strong>1</strong>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <img src="./images/Cool_Cola.png" alt="Cool_Cola">
+                            <h4>Cool_Cola</h4>
+                            <strong>1</strong>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <img src="./images/Cool_Cola.png" alt="Cool_Cola">
+                            <h4>Cool_Cola</h4>
+                            <strong>1</strong>
+                        </button>
+                    </li>
+                </ul>
+                <button class="buy-btn" type="button">획득</button>
+
+
+            </section>
+            <section class="user-money">
+                <h2 class="title">
+                    소지금:<strong>25,000 원</strong>
+                </h2>
+            </section>
+            <section class="user-items">
+                <h2 class="title">획득한 음료</h2>
+                <ul class="get-list list-form scroll">
+                    <li>
+                        <img src="./images/Cool_Cola.png" alt="Cool_Cola">
+                        <h4>Cool_Cola</h4>
+                        <strong>1</strong>
+                    </li>
+                    <li>
+                        <img src="./images/Cool_Cola.png" alt="Cool_Cola">
+                        <h4>Cool_Cola</h4>
+                        <strong>1</strong>
+                    </li>
+                    <li>
+                        <img src="./images/Cool_Cola.png" alt="Cool_Cola">
+                        <h4>Cool_Cola</h4>
+                        <strong>1</strong>
+                    </li>
+                    <li>
+                        <img src="./images/Cool_Cola.png" alt="Cool_Cola">
+                        <h4>Cool_Cola</h4>
+                        <strong>1</strong>
+                    </li>
+                    <li>
+                        <img src="./images/Cool_Cola.png" alt="Cool_Cola">
+                        <h4>Cool_Cola</h4>
+                        <strong>1</strong>
+                    </li>
+                    <li>
+                        <img src="./images/Cool_Cola.png" alt="Cool_Cola">
+                        <h4>Cool_Cola</h4>
+                        <strong>1</strong>
+                    </li>
+                    <li>
+                        <img src="./images/Cool_Cola.png" alt="Cool_Cola">
+                        <h4>Cool_Cola</h4>
+                        <strong>1</strong>
+                    </li>
+                    <li>
+                        <img src="./images/Cool_Cola.png" alt="Cool_Cola">
+                        <h4>Cool_Cola</h4>
+                        <strong>1</strong>
+                    </li>
+                    <li>
+                        <img src="./images/Cool_Cola.png" alt="Cool_Cola">
+                        <h4>Cool_Cola</h4>
+                        <strong>1</strong>
+                    </li>
+                </ul>
+                <h3 class="result-money">총금액 : <strong>9,000 원</strong></h3>
+            </section>
+        </main>
+    </div>
+    
 </body>
 </html>
