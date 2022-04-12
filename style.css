@@ -17,12 +17,20 @@ body{
 }
 
 .hide{
-    width: 0;
-    height: 0;
+    width: 1px;
+    height: 1px;
     overflow: hidden;
-    text-indent: -9999px;
-    position: fixed;
+    margin: -1px;
+    position: absolute;
+    clip: rect(0 0 0 0);
 }
+
+.clear-fix::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
 /* 공통 design*/
 .scroll::-webkit-scrollbar {
     width: 4px;
@@ -103,71 +111,36 @@ body{
 /* main */
 .main{
     height: 545px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: column;
+    overflow: hidden;
 }
-
 
 /* machine */
 .main .machine{
     width: 360px;
-    height: 545px;
     padding: 31px 27px 28px;
     box-sizing: border-box;
     background-color: #fff;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    float: left;
 }
 
 .machine .drinks{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 }
-.machine .drinks li{
-    position: relative;
-    overflow: hidden;    
-    width: 94px;
-    height: 130px;
+.machine .drinks .can-btn{
+    float: left;
     padding: 11px 12px 9px;
-    margin-bottom: 12px;
-    box-sizing: border-box;
+    margin: 0 12px 12px 0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     border-radius: 10px; 
     background-color: #fff;
-    font-weight: 500;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
+.machine .drinks .can-btn:nth-child(3n){ margin-right: 0;}
+.machine .drinks .can-btn:nth-child(n+3){ margin-bottom: 0;}
 
-.machine .drinks .sold_out{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    left: 0; top: 0;
-}
-.machine .drinks .sold_out::after{
-    content: '';
-    display: block;
-    width: 58px;
-    height: 44px;
-    position: absolute;
-    left: calc(50% - 29px);
-    top: calc(50% - 22px);
-    background-image: url(./images/Sold-out.png);
-    background-size: cover;
-    background-position: center;
-}
-
-/* .machine .drinks .can-btn{} */
-
-.machine .drinks .can-btn img{
-    width: 35.86px;
-}
+.machine .drinks .can-btn img{ width: 35.86px;}
 
 .machine .drinks .can-btn h4{
     font-size: 10px;
@@ -177,8 +150,7 @@ body{
 
 .machine .drinks .can-btn strong{
     display: block;
-    width: 70px;
-    padding: 5px 0;
+    padding: 5px 16px;
     height: 12px;
     font-size: 12px;
     color: #fff;
@@ -186,44 +158,60 @@ body{
     border-radius: 50px;
 }
 
-.machine .changes-wrap{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-bottom: 12px;
+.machine .drinks .can-btn .sold_out{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.machine .drinks .sold_out::after{
+    content: '';
+    display: inline-block;
+    width: 58px;
+    height: 44px;
+    position: absolute;
+    left: 0;top: 0;bottom: 0;right: 0;
+    margin: auto;
+    background-image: url(./images/Sold-out.png);
+    background-size: cover;
+    background-position: center;
 }
 
-.machine .changes-wrap .left{
+.machine .changes-wrap{ margin-bottom: 12px; }
+
+.machine .left{
     width: 200px;
-    height: 32px;
     border-radius: 6px;
-    font-size: 14px;
-    padding: 8px 10px;
+    font-size: 13px;
+    padding: 10px;
     box-sizing: border-box;
+    float: left;
 }
-.machine .changes-wrap .right{
+.machine .right{
     width: 94px;
-    height: 32px;
+    padding: 10px 0;
     font-size: 13px;
     border-radius: 6px;
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    float: right;
 }
 
 .machine .changes.left{
     background-color: var(--main);
-    overflow: hidden;
 }
 .machine .changes span{ float: right; }
 
 .machine .deposit-form{
-    margin-top: 12px;
-    display: flex;
+    margin-bottom: 10px;
 }
-
+.machine .deposit{
+    padding: 8px 10px;
+}
 .machine .deposit.left{
-    padding-left: 6px;
     border: 2px solid var(--border);
     margin-right: 12px;
 }
@@ -231,12 +219,10 @@ body{
 .machine .cart-list{
     width: 200px;
     height: 106px;
+    float: left;
 }
 
-.machine .cart-list li button{
-    width: 100%;
-    
-}
+.machine .cart-list li button{ width: 100%;}
 
 .machine .buy-btn{
     width: 94px;
@@ -245,23 +231,24 @@ body{
     color: #fff;
     font-weight: 700;
     border-radius: 6px;
+    float: right;
 }
 
 /* user-money */
 .main .user-money{
     width: 360px;
-    height: 50px;
+    margin-bottom: 20px;
+    float: right;
     background-color: #fff;
+    padding: 9px 0;
 }
 
 .main .user-money .title{
     width: 286px;
-    height: 20px;
     padding: 6px 10px;
-    margin: 9px 27px;
+    margin: 0 auto;
     background-color: var(--main);
     border-radius: 6px;
-    overflow: hidden;
 }
 .main .user-money .title strong{
     float: right;
@@ -270,10 +257,10 @@ body{
 /* user-items */
 .main .user-items{
     width: 306px;
-    height: 415px;
     background-color: #fff;
     padding: 30px 27px;
     text-align: center;
+    float: right;
 }
 
 .main .user-items .title{
@@ -283,7 +270,7 @@ body{
 .main .user-items .get-list{
     width: 306px;
     height: 364px;
-    margin: 13px auto 6px;
+    margin-top: 13px;
 }
 
 .result-money{
