@@ -1,0 +1,268 @@
+
+body{
+    background-color: #EAE8FE;
+}
+.wrap{
+    display: flex;
+    gap: 0 28px;
+    margin-top: 247px;
+    font-family: 'Noto Sans KR', sans-serif;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.section-layout {
+    width: 360px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.list-layout{
+    background-color: #EAE8FE;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 5px;
+    height: 106px;
+    overflow-y: auto;
+}
+
+.list-layout li{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 8px 7px 10px;
+    background-color: #fff;
+    font-size: 9px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.list-layout li + li{
+    margin-top: 6px;
+}
+
+.list-layout img{
+    width: 18px;
+    float: left;
+}
+.list-layout strong{
+    margin-left: 10px;
+    line-height: 32px;
+    float: left;
+}
+
+.list-layout span{
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 5px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-layout::-webkit-scrollbar {
+    width: 4px;
+}
+
+.list-layout::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.list-layout::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #fff;
+}
+.list-layout::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+.list-layout {
+    scrollbar-width: thin;
+    scrollbar-color: #fff transparent;
+}
+
+/* design  */
+.tit-logo{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    max-width: 365px;
+    height: 180px;
+    background-image: url('../images/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+} 
+/* .tit-logo end */
+.drinks-machine{
+    padding: 31px 27px 28px;
+}
+
+.drinks-machine .drinks-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.drinks-list li{   
+    border-radius: 10px;
+    box-shadow:0px 0px 4px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+}
+
+.drinks-list li.sold-out::before{
+    content: '품절된 음료수입니다.';
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    position: absolute;
+    left: 0;top: 0;
+    background-color: rgba(0,0,0,0.5);
+    background-image: url(../images/sold_out.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 61px;
+}
+
+.drinks-list .btn-drink{
+    box-sizing: border-box;
+    padding: 11px 12px 9px;
+}
+
+.drinks-list li:not(.sold-out):focus, 
+.drinks-list li:not(.sold-out):active{
+    outline: 3px solid #6327FE;
+}
+
+.btn-drink .drink-img{
+    width: 100%;
+    max-width: 36px;
+}
+
+.btn-drink .drink-name{
+    display: inline-block;
+    font-size: 9px;
+    margin: 6px 0 7px;
+}
+
+.btn-drink .drink-money{
+    display: inline-block;
+    padding: 5px 16px;
+    background-color: #6327FE;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.drinks-machine .buy-wrap{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 500;
+    gap: 12px;
+}
+
+.buy-wrap .count-money, 
+.buy-wrap .inp-money{
+    width: 200px;
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+.buy-wrap .count-money{
+    background-color: #EAE8FE;
+}
+.buy-wrap .count-money .count-user{
+    float: right;
+}
+
+.buy-wrap .inp-money{
+    border: 1px solid #BDBDBD;
+}
+
+.buy-wrap .btn-return, 
+.buy-wrap .btn-get{
+    width: 94px;
+    line-height: 1.2;
+    font-size: 13px;
+    padding: 6px 9px;
+    box-shadow: 0px 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+
+.buy-wrap .cart-list{
+    width: 200px;
+}
+.cart-list .cart-drink{
+    width: 100%;
+}
+
+.buy-wrap .btn-buy{
+    width: 94px;
+    background-color: #6327FE;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 13px;
+    padding: 43px 0;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+/* .drinks-machine end */
+
+.user-info .money-wrap{
+    padding: 9px 27px;
+    margin-bottom: 20px;
+}
+
+.money-wrap .user-wallet{
+    width: 100%;
+    background-color: #EAE8FE;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.user-wallet .user-money{
+    float: right;
+}
+
+
+/* .user-info end */
+
+.user-drinks{
+    padding: 25px 27px 26px;
+}
+
+.user-drinks .tit-buy{
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+.user-drinks .buy-list{  
+    width: 100%;  
+    height: 364px;
+    overflow-y: auto;
+}
+
+.user-drinks .all-count{
+    margin-top: 11px;
+    text-align: right;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* user-drinks end*/

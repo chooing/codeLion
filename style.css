@@ -166,6 +166,7 @@ body{
     position: absolute;
     left: 0;
     top: 0;
+    color: transparent;
 }
 .machine .drinks .sold_out::after{
     content: '';
@@ -279,7 +280,7 @@ body{
 }
 
 /* media  */
-@media (max-width: 360px) {
+@media (max-width: 764px) {
     body{
         background-color: #fff;
         font-weight: 500;
