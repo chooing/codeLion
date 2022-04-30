@@ -1,302 +1,284 @@
-/* setting */
-
-:root{
-    --main:#EAE8FE;
-    --sub:#6327FE;
-    --border:#BDBDBD;
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap');
+@import url(./reset.css);
+/* layout + common */
 body{
-    background-color: var(--main);
+    background-color: #EAE8FE;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 500;
 }
-
-.wrapping{
-    width: 748px;
-    margin: 0 auto;
+.wrap{
+    display: flex;
+    gap: 0 28px;
+    margin-top: 247px;
+    font-family: 'Noto Sans KR', sans-serif;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.section-layout {
+    width: 360px;
+    background-color: #fff;
+    box-sizing: border-box;
 }
 
-.hide{
-    width: 1px;
-    height: 1px;
+.list-layout{
+    background-color: #EAE8FE;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 5px;
+    height: 106px;
+    overflow-y: auto;
+}
+
+.list-layout li{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 8px 7px 10px;
+    background-color: #fff;
+    font-size: 9px;
+    border-radius: 5px;
     overflow: hidden;
-    margin: -1px;
-    position: absolute;
-    clip: rect(0 0 0 0);
 }
 
-.clear-fix::after{
-    content: '';
-    clear: both;
-    display: block;
+.list-layout li + li{
+    margin-top: 6px;
 }
 
-/* 공통 design*/
-.scroll::-webkit-scrollbar {
+.list-layout img{
+    width: 18px;
+    float: left;
+}
+.list-layout strong{
+    margin-left: 10px;
+    line-height: 32px;
+    float: left;
+}
+
+.list-layout span{
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 5px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list-layout::-webkit-scrollbar {
     width: 4px;
 }
-.scroll::-webkit-scrollbar-track {
+
+.list-layout::-webkit-scrollbar-track {
     background-color: transparent;
 }
-.scroll::-webkit-scrollbar-thumb {
+.list-layout::-webkit-scrollbar-thumb {
     border-radius: 2px;
     background-color: #fff;
 }
-.scroll::-webkit-scrollbar-button {
+.list-layout::-webkit-scrollbar-button {
     width: 0;
     height: 0;
 }
-.scroll {
+
+.list-layout {
     scrollbar-width: thin;
     scrollbar-color: #fff transparent;
 }
 
-.list-form{
-    overflow: hidden scroll;
-    border: 2px solid var(--border);
-    box-sizing: border-box;
-    border-radius: 6px;
-    padding: 12px;
-    background-color: var(--main);
-}
-
-.list-form li{
+/* design  */
+.tit-logo{
+    position: absolute;
+    top: 0;
     width: 100%;
-    background-color: #fff;
-    box-sizing: border-box;
-    margin-bottom: 6px;
-    border-radius: 6px;
-    padding: 8px 8px 8px 10px;
-    height: 46px;
-    overflow: hidden;
-}
-.list-form li:last-child{
-    margin-bottom: 0;
-}
-
-.list-form li img{
-    float: left;
-    width: 18px;
-}
-.list-form li h4{
-    display: inline;
-    float: left;
-    font-size: 9px;
-    margin-left: 10px;
-    line-height: 3;
-}
-.list-form li strong{
-    display: block;
-    font-size: 14px;
-    width: 30px;
-    height: 30px;
-    box-sizing: border-box;
-    border-radius: 6px;
-    border: 2px solid var(--border);
-    line-height: 1.9;
-    float: right;
-}
-
-
-/* header */
-.header{
-    margin-bottom: 67px;
-}
-.logo{ 
-    width: 386px; 
-    margin: 0 auto;
-}
-.logo img{width: 386px;}
-
-/* main */
-.main{
-    height: 545px;
-    overflow: hidden;
-}
-
-/* machine */
-.main .machine{
-    width: 360px;
+    max-width: 365px;
+    height: 180px;
+    background-image: url('./images/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+} 
+/* .tit-logo end */
+.drinks-machine{
     padding: 31px 27px 28px;
-    box-sizing: border-box;
-    background-color: #fff;
-    float: left;
 }
 
-.machine .drinks{
-    margin-bottom: 20px;
+.drinks-machine .drinks-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
 }
-.machine .drinks .can-btn{
-    float: left;
-    padding: 11px 12px 9px;
-    margin: 0 12px 12px 0;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    border-radius: 10px; 
-    background-color: #fff;
-    text-align: center;
-    position: relative;
+
+.drinks-list li{   
+    border-radius: 10px;
+    box-shadow:0px 0px 4px rgba(0, 0, 0, 0.5);
     overflow: hidden;
-}
-.machine .drinks .can-btn:nth-child(3n){ margin-right: 0;}
-.machine .drinks .can-btn:nth-child(n+3){ margin-bottom: 0;}
-
-.machine .drinks .can-btn img{ width: 35.86px;}
-
-.machine .drinks .can-btn h4{
-    font-size: 10px;
-    margin-top: 3px;
-    margin-bottom: 6px;
+    position: relative;
 }
 
-.machine .drinks .can-btn strong{
-    display: block;
-    padding: 5px 16px;
-    height: 12px;
-    font-size: 12px;
-    color: #fff;
-    background-color: var(--sub);
-    border-radius: 50px;
-}
-
-.machine .drinks .can-btn .sold_out{
+.drinks-list li.sold-out::before{
+    content: '품절된 음료수입니다.';
     display: block;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    left: 0;
-    top: 0;
     color: transparent;
-}
-.machine .drinks .sold_out::after{
-    content: '';
-    display: inline-block;
-    width: 58px;
-    height: 44px;
     position: absolute;
-    left: 0;top: 0;bottom: 0;right: 0;
-    margin: auto;
-    background-image: url(./images/Sold-out.png);
-    background-size: cover;
+    left: 0;top: 0;
+    background-color: rgba(0,0,0,0.5);
+    background-image: url(./images/sold_out.png);
+    background-repeat: no-repeat;
     background-position: center;
+    background-size: 61px;
 }
 
-.machine .changes-wrap{ margin-bottom: 12px; }
-
-.machine .left{
-    width: 200px;
-    border-radius: 6px;
-    font-size: 13px;
-    padding: 10px;
+.drinks-list .btn-drink{
     box-sizing: border-box;
-    float: left;
-}
-.machine .right{
-    width: 94px;
-    padding: 10px 0;
-    font-size: 13px;
-    border-radius: 6px;
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    float: right;
+    padding: 11px 12px 9px;
 }
 
-.machine .changes.left{
-    background-color: var(--main);
-}
-.machine .changes span{ float: right; }
-
-.machine .deposit-form{
-    margin-bottom: 10px;
-}
-.machine .deposit{
-    padding: 8px 10px;
-}
-.machine .deposit.left{
-    border: 2px solid var(--border);
-    margin-right: 12px;
+.drinks-list li:not(.sold-out):focus, 
+.drinks-list li:not(.sold-out):active{
+    outline: 3px solid #6327FE;
 }
 
-.machine .cart-list{
-    width: 200px;
-    height: 106px;
-    float: left;
+.btn-drink .drink-img{
+    width: 100%;
+    max-width: 36px;
 }
 
-.machine .cart-list li button{ width: 100%;}
+.btn-drink .drink-name{
+    display: inline-block;
+    font-size: 9px;
+    margin: 6px 0 7px;
+}
 
-.machine .buy-btn{
-    width: 94px;
-    height: 106px;
-    background-color: var(--sub);
+.btn-drink .drink-money{
+    display: inline-block;
+    padding: 5px 16px;
+    background-color: #6327FE;
+    font-size: 12px;
     color: #fff;
-    font-weight: 700;
-    border-radius: 6px;
-    float: right;
+    border-radius: 50px;
 }
 
-/* user-money */
-.main .user-money{
-    width: 360px;
-    margin-bottom: 20px;
-    float: right;
-    background-color: #fff;
-    padding: 9px 0;
+.drinks-machine .buy-wrap{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 500;
+    gap: 12px;
 }
 
-.main .user-money .title{
-    width: 286px;
+.buy-wrap .count-money, 
+.buy-wrap .inp-money{
+    width: 200px;
     padding: 6px 10px;
-    margin: 0 auto;
-    background-color: var(--main);
-    border-radius: 6px;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: 500;
+    box-sizing: border-box;
 }
-.main .user-money .title strong{
+.buy-wrap .count-money{
+    background-color: #EAE8FE;
+}
+.buy-wrap .count-money .count-user{
     float: right;
 }
 
-/* user-items */
-.main .user-items{
-    width: 306px;
-    background-color: #fff;
-    padding: 30px 27px;
-    text-align: center;
-    float: right;
+.buy-wrap .inp-money{
+    border: 1px solid #BDBDBD;
 }
 
-.main .user-items .title{
+.buy-wrap .btn-return, 
+.buy-wrap .btn-get{
+    width: 94px;
+    line-height: 1.2;
+    font-size: 13px;
+    padding: 6px 9px;
+    box-shadow: 0px 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+
+.buy-wrap .cart-list{
+    width: 200px;
+}
+.cart-list .cart-drink{
+    width: 100%;
+}
+
+.buy-wrap .btn-buy{
+    width: 94px;
+    background-color: #6327FE;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 13px;
+    padding: 43px 0;
+    box-sizing: border-box;
     font-weight: 700;
 }
 
-.main .user-items .get-list{
-    width: 306px;
+/* .drinks-machine end */
+
+.user-info .money-wrap{
+    padding: 9px 27px;
+    margin-bottom: 20px;
+}
+
+.money-wrap .user-wallet{
+    width: 100%;
+    background-color: #EAE8FE;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 6px 10px;
+    box-sizing: border-box;
+}
+
+.user-wallet .user-money{
+    font-weight: 700;
+    float: right;
+}
+
+
+/* .user-info end */
+
+.user-drinks{
+    padding: 25px 27px 26px;
+}
+
+.user-drinks .tit-buy{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+.user-drinks .buy-list{  
+    width: 100%;  
     height: 364px;
-    margin-top: 13px;
+    overflow-y: auto;
 }
 
-.result-money{
+.user-drinks .all-count{
+    margin-top: 11px;
     text-align: right;
-    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
-/* media  */
-@media (max-width: 764px) {
-    body{
-        background-color: #fff;
-        font-weight: 500;
-    }
-    .wrapping{
-        width: 360px;
-        /* margin: 0 auto; */
-    }
-    .header{
-        margin-bottom: 25px;
-    }
-    .logo{width: 166px;}
-    .logo img{width: 166px;}
-    .main{
-        height: inherit;
-    }
-    .main .machine{padding-bottom: 10px;}
-    .main .user-items{padding-bottom: 47px;}
+/* user-drinks end*/
+
+@media screen and (max-width:360px) {
+    body{ background-color: #fff; }
+    .tit-logo{
+        max-width: 166px;
+        height: 78px;
+    }    
+    .wrap{ margin-top: 96px; }
+    .user-info .money-wrap { padding: 0 27px; }
+    .drinks-machine { padding-bottom: 20px; }
+    .user-drinks { padding: 20px 27px 40px; }
 }
