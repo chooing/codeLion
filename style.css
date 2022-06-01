@@ -180,12 +180,14 @@ body{
     border-radius: 5px;
     font-weight: 500;
     box-sizing: border-box;
+    display: flex;
+    gap: 0 5px;
 }
 .buy-wrap .count-money{
     background-color: #EAE8FE;
 }
 .buy-wrap .count-money .count-user{
-    float: right;
+    margin-left: auto;
 }
 
 .buy-wrap .inp-money{
@@ -234,13 +236,17 @@ body{
     background-color: #EAE8FE;
     border-radius: 5px;
     font-size: 14px;
-    padding: 6px 10px;
+    padding: 6px 10px 8px;
     box-sizing: border-box;
+    line-height: 1.5;
+    display: flex;
+    gap: 0 5px;
 }
 
 .user-wallet .user-money{
     font-weight: 700;
-    float: right;
+    line-height: inherit;
+    margin-left: auto;
 }
 
 
@@ -255,6 +261,7 @@ body{
     font-size: 14px;
     font-weight: 700;
     margin-bottom: 13px;
+    line-height: 1.5;
 }
 .user-drinks .buy-list{  
     width: 100%;  

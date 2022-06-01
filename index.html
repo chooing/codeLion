@@ -13,42 +13,42 @@
         <section class="section-layout drinks-machine">
             <h2 class="tag-hide">cola 자판기</h2>
             <ul class="drinks-list">
-                <li class="sold-out">
+                <li data-drink-name="Original_Cola">
                     <button type="button" class="btn-drink">
                         <img src="./images/Original_Cola.png" alt="" class="drink-img">
                         <strong class="drink-name">Original_Cola</strong>
                         <span class="drink-money">1000원</span>
                     </button>
                 </li>
-                <li>
+                <li data-drink-name="Violet_Cola">
                     <button type="button" class="btn-drink">
                         <img src="./images/Violet_Cola.png" alt="" class="drink-img">
                         <strong class="drink-name">Violet_Cola</strong>
                         <span class="drink-money">1000원</span>
                     </button>
                 </li>
-                <li>
+                <li data-drink-name="Yellow_Cola">
                     <button type="button" class="btn-drink">
                         <img src="./images/Yellow_Cola.png" alt="" class="drink-img">
                         <strong class="drink-name">Yellow_Cola</strong>
                         <span class="drink-money">1000원</span>
                     </button>
                 </li>
-                <li>
+                <li data-drink-name="Cool_Cola">
                     <button type="button" class="btn-drink">
                         <img src="./images/Cool_Cola.png" alt="" class="drink-img">
                         <strong class="drink-name">Cool_Cola</strong>
                         <span class="drink-money">1000원</span>
                     </button>
                 </li>
-                <li>
+                <li data-drink-name="Green_Cola">
                     <button type="button" class="btn-drink">
                         <img src="./images/Green_Cola.png" alt="" class="drink-img">
                         <strong class="drink-name">Green_Cola</strong>
                         <span class="drink-money">1000원</span>
                     </button>
                 </li>
-                <li>
+                <li data-drink-name="Orange_Cola">
                     <button type="button" class="btn-drink">
                         <img src="./images/Orange_Cola.png" alt="" class="drink-img">
                         <strong class="drink-name">Orange_Cola</strong>
@@ -56,83 +56,39 @@
                     </button>
                 </li>
             </ul>
-
+            <!-- drinks-list end -->
             <section class="buy-wrap">
                 <h2 class="tag-hide">음료수 구매하기</h2>
-                <p class="count-money">잔액: <span class="count-user">1,000 원</span></p>
+                <p class="count-money">잔액: <span class="count-user">0</span> 원</p>
                 <button class="btn-return" type="button" >거스름돈 반환</button>
-                <input class="inp-money" type="number" placeholder="입금액 입력">
+                <input class="inp-money" type="number" placeholder="입금액 입력" min="0">
                 <button class="btn-get" type="button">입금</button>
                 <h2 class="tag-hide">선택한 음료 리스트</h2>
                 <ul class="cart-list list-layout">
-                    <li>
-                        <button class="cart-drink">
-                            <img src="./images/Original_Cola.png" alt="">
-                            <strong>Original_Cola</strong>
-                            <span>1</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="cart-drink">
-                            <img src="./images/Green_Cola.png" alt="">
-                            <strong>Green_Cola</strong>
-                            <span>2</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="cart-drink">
-                            <img src="./images/Orange_Cola.png" alt="">
-                            <strong>Orange_Cola</strong>
-                            <span>1</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="cart-drink">
-                            <img src="./images/Violet_Cola.png" alt="">
-                            <strong> Violet_Cola</strong>
-                            <span>5</span>
-                        </button>
-                    </li>
+                    <!-- 선택한 음료 리스트 넣는 곳 -->
                 </ul>
                 <button class="btn-buy" type="button">획득</button>
             </section>
-
-
         </section>
+        <!--  drinks-machine end -->
+
         <section class="user-info">
             <h2 class="tag-hide">마이페이지</h2>
             <div class="section-layout money-wrap">
                 <p class="user-wallet">
-                    소지금: <strong class="user-money">25,000 원</strong>
+                    소지금: <strong class="user-money">0</strong>원
                 </p>
             </div>
             <section class="section-layout user-drinks">
                 <h3 class="tit-buy">획득한 음료</h3>
                 <ul class="buy-list list-layout">
-                    <li>
-                        <img src="./images/Original_Cola.png" alt="">
-                        <strong>Original_Cola</strong>
-                        <span>1</span>
-                    </li>
-                    <li>
-                        <img src="./images/Green_Cola.png" alt="">
-                        <strong>Green_Cola</strong>
-                        <span>2</span>
-                    </li>
-                    <li>
-                        <img src="./images/Orange_Cola.png" alt="">
-                        <strong>Orange_Cola</strong>
-                        <span>1</span>
-                    </li>
-                    <li>
-                        <img src="./images/Violet_Cola.png" alt="">
-                        <strong> Violet_Cola</strong>
-                        <span>5</span>
-                    </li>
+
+                    
                 </ul>
-                <p class="all-count">총금액: <strong class="all-money">9,000원</strong></p>
+                <p class="all-count">총금액: <strong class="all-money">0</strong>원</p>
             </section>
         </section>
     </div>
+    <script src="./vending.js"></script>
 </body>
 </html>
